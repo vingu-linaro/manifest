@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
         <remote name="tfo"    fetch="https://git.trustedfirmware.org" />
+        <remote name="arm-gitlab"    fetch="https://gitlab.arm.com" />
 
         <include name="common.xml" />
-        <project path="build"                name="OP-TEE/build.git" revision="refs/tags/4.10.0" clone-depth="1">
+        <project path="build"                name="vingu-linaro/build.git" revision="qemu_v8_scmi" clone-depth="1">
                 <linkfile src="qemu_v8.mk" dest="build/Makefile" />
         </project>
 
@@ -15,7 +16,7 @@
         <project path="mbedtls"              name="Mbed-TLS/mbedtls.git"                  revision="refs/tags/mbedtls-3.6.5" sync-s="true" clone-depth="1" />
         <project path="u-boot"               name="u-boot/u-boot.git"                     revision="refs/tags/v2025.07"  clone-depth="1" />
         <project path="xen"                  name="xen-project/xen.git"                   revision="refs/tags/RELEASE-4.20.0" clone-depth="1" />
-        <project path="SCP-firmware"         name="linaro-swg/SCP-firmware.git"             revision="refs/tags/v2.16.0" clone-depth="1" />
+        <project path="SCP-firmware"         name="firmware/SCP-firmware.git"             revision="57bb4a303d848f11cef182b24ef16060d371858c" remote="arm-gitlab" clone-depth="1" />
 
         <project path="trusted-services"     name="TS/trusted-services.git"                  revision="8881aaa3a9cb21e8b869e28c1a079f02fa46fd6c" remote="tfo" clone-depth="1" />
         <project path="linux-arm-ffa-user"   name="linaro-swg/linux-trusted-services.git" revision="refs/tags/debugfs-v5.0.2"     clone-depth="1" />
